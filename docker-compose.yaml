@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  cassandra:
+    image: cassandra:latest
+    container_name: my_cassandra
+    ports:
+      - '9042:9042'
+    environment:
+      - MAX_HEAP_SIZE=512M
+      - HEAP_NEWSIZE=100M
+    restart: always
